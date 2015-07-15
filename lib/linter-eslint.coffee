@@ -120,7 +120,7 @@ module.exports =
                   endCol = TextEditor.getBuffer().lineLengthForRow line - 1
                   range = [[line - 1, startCol], [line - 1, endCol]]
 
-                  if showRuleId
+                  if showRuleId and ruleId
                     {
                       type: if severity is 1 then 'warning' else 'error'
                       html: '<span class="badge badge-flexible">' + ruleId + '</span> ' + message
